@@ -1,0 +1,61 @@
+{
+  /* see: https://www.typescriptlang.org/tsconfig#lib */
+
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2021",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+
+    /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "lib": [
+      "es2021",
+    ],
+
+    /* Modules */
+    "module": "commonjs",                                /* Specify what module code is generated: commonjs or esm */
+    "rootDir": "src",                                    /* Specify the root folder within your source files. */
+    "resolveJsonModule": true,                           /* Enable importing .json files */
+
+    "sourceMap": true,                                    /* Let the command Tsc generate source maps to find the issue in your code */
+
+    /* JavaScript Support */
+    "allowJs": true,                                     /* Allow JavaScript files to be a part of your program. Use the `checkJS` option to get errors from these files. */
+
+    /* Emit */
+    "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables `allowSyntheticDefaultImports` for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. Disallow inconsistently-cased references to the same file */
+
+    /* Type Checking */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                               /* Enable error reporting for expressions and declarations with an implied `any` type.. */
+    /* Completeness */
+    "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
+    "typeRoots": ["./node_modules/@types", "./src/types"], /* List of folders to include type definitions from. */
+    "baseUrl": ".",                                       /* Base directory to resolve non-absolute module names. */
+
+
+
+    /* Project Paths - change according to defined structure */
+    "paths": {
+      // "~service/*": ["src/*"],
+      "*": ["node_modules/*", "lib/types/*"],
+      "@config/*": ["./src/config/*", "./dist/config/*"],
+      "@controllers/*": ["./src/controllers/*", "./dist/controllers/*"],
+      "@middlewares/*": ["./src/middlewares/*", "./dist/middlewares/*"],
+      "@models/*": ["./src/models/*", "./dist/models/*"],
+      "@modules/*": ["./src/modules/*", "./dist/modules/*"],
+      "@resources/*": ["./src/resources/*", "./dist/resources/*"],
+      "@types/*": ["./src/types/index", "./dist/types/index"],
+      "@routes/*": ["./src/routes/*", "./dist/routes/*"],
+      "@utils/*": ["./src/utils/*", "./dist/utils/*"],
+      "@utils": ["./src/utils/index", "./dist/utils/index"]
+    },
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts"
+  ]
+}
