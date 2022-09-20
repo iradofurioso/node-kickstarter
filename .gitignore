@@ -2,6 +2,10 @@
 cache/*
 !cache/.gitkeep
 
+# Compiled version
+dist/*
+!dist/.gitkeep
+
 # Uploaded files, storage files.
 storage/*
 !storage/.gitkeep
@@ -94,7 +98,6 @@ typings/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
