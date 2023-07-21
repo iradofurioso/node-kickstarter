@@ -7,6 +7,7 @@ const initApp = async () => {
     version: "1.0.0",
   })
 
+  app.use(plugins.throttle({burst:100, rate: 50, ip: true})) // Endpoint throttling limit.
   app.use(plugins.queryParser())
   app.use(plugins.bodyParser())
   dummyRouter(app)
